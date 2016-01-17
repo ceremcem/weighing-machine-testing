@@ -17,8 +17,8 @@
    <widget class="QProgressBar" name="progressBar">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>70</y>
+      <x>180</x>
+      <y>210</y>
       <width>371</width>
       <height>23</height>
      </rect>
@@ -30,14 +30,33 @@
    <widget class="QSlider" name="horizontalSlider">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>140</y>
+      <x>180</x>
+      <y>300</y>
       <width>371</width>
       <height>41</height>
      </rect>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>70</y>
+      <width>501</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>26</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Simulator Control Window</string>
     </property>
    </widget>
   </widget>
