@@ -9,16 +9,16 @@ class MainWindow(Actor, Qt.QtGui.QMainWindow):
     def __init__(self):
         Qt.QtGui.QMainWindow.__init__(self)
         Actor.__init__(self)
-        self.ui = Qt.loadUI('main.ui')
+        self.ui = Qt.loadUI('display.ui')
 
-    def handle_WeightMessage(self, msg_raw):
-        msg = get_msg_body(msg_raw)
+
+    def handle_WeightMessage(self, msg):
         print "gui received message: ", msg['val']
         self.ui.weight.display(msg['val'])
 
 if __name__ == "__main__":
     import sys
-    ProxyActor()
+    ProxyActor(brokers="192.168.2.107:5012:5013")
     app = Qt.QtGui.QApplication(sys.argv)
     win = MainWindow()
     win.ui.show()
